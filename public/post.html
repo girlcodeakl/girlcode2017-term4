@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+    var myCoolFunction = function (e) {
+    e.preventDefault();
+    alert("nothing happens - except this alert!");
+}
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <meta charset='utf-8'>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -12,7 +18,9 @@
     </ul>
       <form method="post" action="/posts">
           <input type="text" name="message" placeholder="message goes here">
-          <button>Post it!</button>
+          <button class="postButton">post</button>
+
       </form>
+    </script>
   </body>
 </html>
