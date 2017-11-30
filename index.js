@@ -25,10 +25,13 @@ var saveNewPost = function (request, response) {
   console.log(request.body.message); //write it on the command prompt so we can see
   var post= {};
 post.message = request.body.message;
+post.picture = request.body.picture;
 posts.push(post); //save it in our list
+console.log(post)
   response.send("thanks for your message. Press back to add another");
 }
 app.post('/posts', saveNewPost);
+
 
 //listen for connections on port 3000
 app.listen(process.env.PORT || 3000);

@@ -20,6 +20,8 @@
 
 var displayMessage = function(post) {
   var postElement = $('<div class="post"></div>');
+  var imageElement = $('<img class="picture" src=' + post.picture + '>');
+postElement.append(imageElement);
   $(".message-list").append(postElement);
 
   var messageElement = $('<div class="message">' + post.message + '</div>');
