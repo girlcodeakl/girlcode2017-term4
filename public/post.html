@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-    var myCoolFunction = function (e) {
-    e.preventDefault();
-    alert("nothing happens - except this alert!");
-}
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <meta charset='utf-8'>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="note"></div>
     <ul>
       <li><a href="feed.html">Feed</a></li>
       <li><a href="post.html">Post</a></li>
       <li><a href="index.html">Home</a></li>
     </ul>
       <form method="post" action="/posts">
-          <input type="text" name="message" placeholder="message goes here">
+          <input class="messageInput""text" name="message" placeholder="message goes here">
           <button class="postButton">post</button>
-
       </form>
+      <script>
+      var myCoolFunction = function (e) {
+          e.preventDefault();
+          var data = {};
+          data.message = $(".messageInput").val();
+          $(".note").text("Thanks! Your message was saved!");
+    $.post( "/posts" , data );
+      }
+      $(".postButton").on("click", myCoolFunction);
     </script>
   </body>
 </html>
