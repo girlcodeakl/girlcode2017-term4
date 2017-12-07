@@ -114,3 +114,7 @@ li a:hover {
 .picture {
   width: 100px;
 }
+.rating-wrapper {position: relative;
+width: 200px;
+height: 50px;
+margin: 0 auto;}

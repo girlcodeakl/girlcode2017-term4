@@ -2,6 +2,7 @@
 <html>
   <head>
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="/rater.js" type="text/javascript"></script>
     <meta charset='utf-8'>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -15,6 +16,7 @@
       <form method="post" action="/posts">
         <input class="pictureInput" type="text" name="picture" placeholder="picture URL">
           <input class="messageInput""text" name="message" placeholder="message goes here">
+          <div class="rating-wrapper"><div class="rating" data-rate-value=5></div></div>
           <button class="postButton">post</button>
       </form>
       <script>
@@ -23,10 +25,19 @@
           var data = {};
           data.message = $(".messageInput").val();
           data.picture = $(".pictureInput").val();
+          data.rating = $(".rating").data("rate").value
           $(".note").text("Thanks! Your message was saved!");
     $.post( "/posts" , data );
       }
       $(".postButton").on("click", myCoolFunction);
+      $(".rating").rate();
+
+//or for example
+var options = {
+    max_value: 5,
+    step_size: 1,
+}
+$(".rating").rate(options);
     </script>
   </body>
 </html>

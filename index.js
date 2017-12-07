@@ -18,7 +18,7 @@ var posts = [];
 var sendPostsList = function (request, response) {
   response.send(posts);
 }
-app.get('/posts', sendPostsList);
+app.get('/posts', sendPostsList); //stringarray
 
 //let a client POST something new
 var saveNewPost = function (request, response) {
@@ -26,6 +26,7 @@ var saveNewPost = function (request, response) {
   var post= {};
 post.message = request.body.message;
 post.picture = request.body.picture;
+post.rating = request.body.rating;
 posts.push(post); //save it in our list
 console.log(post)
   response.send("thanks for your message. Press back to add another");

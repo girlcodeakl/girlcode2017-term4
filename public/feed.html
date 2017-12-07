@@ -26,6 +26,9 @@ postElement.append(imageElement);
 
   var messageElement = $('<div class="message">' + post.message + '</div>');
   postElement.append(messageElement);
+
+  var ratingElement = $('<div class="rating">' + post.rating + '</div>');
+  postElement.append(ratingElement);
 }
 
 var createFeed = function(posts) {
