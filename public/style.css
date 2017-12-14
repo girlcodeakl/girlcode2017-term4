@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  margin-left: 92px;
 
 }
 
@@ -15,9 +16,10 @@ h2 {
   color: #f44141;
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style-type: none ;
+
+    margin-left:-150px;
+    width : 150px;
 }
 li a {
     display: block;
@@ -25,9 +27,9 @@ li a {
 }
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
+
+
+
     background-color: #f1f1f1;
 }
 
@@ -61,9 +63,6 @@ li:last-child {
 }
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 25%;
     background-color: #95f442;
     height: 100%; /* Full height */
     position: fixed; /* Make it stick, even on scroll */
@@ -86,8 +85,6 @@ ul {
 }
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: #95f442;
 }
