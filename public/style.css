@@ -104,6 +104,21 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
+input {
+  display: block;
+  margin:10px  auto ;
+padding: 10px 13px;
+    border: 1px solid orange;
+    background-color: yellow;
+    color: red;
+}
+
+button {
+   color: white;
+   background-color: blue;
+   border: 1px solid blue;
+   padding: 10px 13px;
+}
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
